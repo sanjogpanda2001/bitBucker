@@ -1,0 +1,40 @@
+package Checkingjava;
+
+import java.util.Stack;
+
+public class recursionstacksort {
+	static Stack<Integer>s=new Stack<>();
+	public static void main(String args[]) {
+		s.push(4);
+		s.push(2);
+		s.push(3);
+		s.push(1);
+		System.out.println(s);
+		stacksort();
+		System.out.println(s);
+	}
+	public static void stacksort() {
+    if(s.size()>0) {
+    	int m=s.pop();
+    	stacksort();
+    	sort(m);
+    }
+	}
+	public static void sort(int m) {
+		if(s.isEmpty()) {
+			s.push(m);
+			
+		}
+		else {
+			if(s.peek()>m) {
+				int x=s.pop();
+				sort(m);
+	           s.push(x);
+				
+			}
+			else {
+				s.push(m);
+			}
+		}
+	}
+}
