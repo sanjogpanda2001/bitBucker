@@ -214,7 +214,7 @@ body{
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
-    font-size: small;
+    font-size: large;
   }
   .links {
     position: absolute;
